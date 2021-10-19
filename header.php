@@ -73,7 +73,7 @@
 <div class="example-nft">
     <div class="row justify-content-md-end justify-content-lg-end justify-content-sm-center">
         <div class="card col-sm-5 col-md-6 col-lg-6 col-xl-5">
-            <img src="http://www.raspberywww.com/wp-content/uploads/2021/10/pexels-steve-johnson-1109354.jpg" class="card-img-top rounded-corner" alt="...">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pexels-steve-johnson-1109354.jpg" class="card-img-top rounded-corner" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -82,7 +82,8 @@
         </div>
     </div>
 </div>
-<div class="container-fluid my-background p-0 m-0"></div>
+<div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pexels-steve-johnson-1109354.jpg" class="container-fluid my-background p-0 m-0" alt="...">
+</div>
 
 
 

@@ -46,7 +46,6 @@ h2 {
 }
 
 .my-background {
-	background-image: url("http://www.raspberywww.com/wp-content/uploads/2021/10/pexels-steve-johnson-1109354.jpg");
 	background-size: 100%;
 	background-blend-mode: multiply;
 	filter: blur(15px);

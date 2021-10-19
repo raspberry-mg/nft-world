@@ -24,19 +24,19 @@ get_header();
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-                <img src="/img/pexels-zaksheuskaya-1616403.jpg" class="d-block w-75 mx-auto" alt="...">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pexels-rodnae-productions-8370378.jpg" class="d-block w-75 mx-auto" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <p>Some representative placeholder content for the first slide.</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="/img/pexels-zaksheuskaya-1616403.jpg" class="d-block w-75 mx-auto" alt="...">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pexels-rodnae-productions-8370378.jpg" class="d-block w-75 mx-auto" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="/img/pexels-zaksheuskaya-1616403.jpg" class="d-block w-75 mx-auto" alt="...">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pexels-rodnae-productions-8370378.jpg" class="d-block w-75 mx-auto" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <p>Some representative placeholder content for the third slide.</p>
                 </div>
@@ -73,25 +73,25 @@ get_header();
         <div class="row">
             <div class="card border-light col-lg-3 col-md-3">
                 <div class="card-body">
-                    <img src="/img/pexels-zaksheuskaya-1616403.jpg" class="img-fluid rounded-start" alt="...">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/img/pexels-zaksheuskaya-1616403.jpg" class="img-fluid rounded-start" alt="...">
                     <h3 class="card-title mt-5">Light Заголовок карточки</h3>
                 </div>
             </div>
             <div class="card border-light col-lg-3 col-md-3">
                 <div class="card-body">
-                    <img src="/img/pexels-zaksheuskaya-1616403.jpg" class="img-fluid rounded-start" alt="...">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/img/pexels-zaksheuskaya-1616403.jpg" class="img-fluid rounded-start" alt="...">
                     <h3 class="card-title mt-5">Light Заголовок карточки</h3>
                 </div>
             </div>
             <div class="card border-light col-lg-3 col-md-3">
                 <div class="card-body">
-                    <img src="/img/pexels-zaksheuskaya-1616403.jpg" class="img-fluid rounded-start" alt="...">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/img/pexels-zaksheuskaya-1616403.jpg" class="img-fluid rounded-start" alt="...">
                     <h3 class="card-title mt-5">Light Заголовок карточки</h3>
                 </div>
             </div>
             <div class="card border-light col-lg-3 col-md-3">
                 <div class="card-body">
-                    <img src="/img/pexels-zaksheuskaya-1616403.jpg" class="img-fluid rounded-start" alt="...">
+                    <img src="<?php echo get_template_directory_uri();?>/assets/img/pexels-zaksheuskaya-1616403.jpg" class="img-fluid rounded-start" alt="...">
                     <h3 class="card-title mt-5">Light Заголовок карточки</h3>
                 </div>
             </div>
@@ -99,5 +99,4 @@ get_header();
     </div>
 
 <?php
-get_sidebar();
 get_footer();

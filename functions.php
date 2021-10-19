@@ -147,6 +147,7 @@ function nft_world_scripts() {
     wp_enqueue_style( 'nft-world-mystyle', get_template_directory_uri() . '/style.css');
     wp_style_add_data( 'nft-world-style', 'rtl', 'replace' );
 
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js');
     wp_enqueue_script( 'font-awesome', 'https://use.fontawesome.com/cd7f354353.js', array(), '1.0.0', true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
