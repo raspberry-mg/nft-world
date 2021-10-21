@@ -94,6 +94,11 @@ h2 {
 	margin-top: 180px;
 }
 
+.nft-page h3 {
+	margin-top: 20px;
+}
+
+
 @media screen and (min-width: 3840px) {
 	h2 {
 		font-size: 60px;
