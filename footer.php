@@ -38,7 +38,7 @@
             </a>
         </div>
     </div>
-    <div class="text-center text-md-start mt-5">
+    <div class="text-center text-md-start mt-5 text-footer">
         <div class="row mt-3">
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                 <h3 class="text-uppercase fw-bold mb-4">
@@ -100,7 +100,7 @@
         </div>
     </div>
     <div class="text-center p-4">
-        © 2021 Copyrght:
+        &copy; <?php echo date('Y');?> Copyrght:
         <a class="text-reset fw-bold" href="">NFT World</a>
     </div>
 </div>

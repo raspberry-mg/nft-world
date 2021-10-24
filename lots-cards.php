@@ -18,23 +18,22 @@ get_header();
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                 <div class="col-sm-5">
                     <div class="card">
+                        <?php echo the_content($custom_lot_card); ?>
                         <div class="card-body">
-                            <?php the_content(); ?>
+                            <?php echo the_excerpt($custom_lot_card); ?>
                         </div>
                     </div>
                 </div>
-            <?php endwhile; wp_reset_postdata(); ?>
-        <?php endif; ?>
         <div class="col-sm-7">
             <div class="card border-light bg-transparent">
                 <div class="card-body">
-                    <p><i class="fa fa-user-circle"></i> Rafael Oldy</p>
-                    <h1>Abstraction Art</h1>
-                    <p><i class="fa fa-user-circle"></i> 500 owners <i class="fa fa-user-circle"></i> views <i class="fa fa-user-circle"></i> favorites</p>
+                    <p><i class="fa fa-user-circle"></i> <?php echo get_post_meta($post->ID, "Author", $single = true); ?></p>
+                    <h1><?php echo get_the_title($custom_lot_card); ?></h1>
+                    <p><i class="fa fa-users"></i> 500 owners <i class="fa fa-eye"></i> <?php echo setAndViewPostViews(get_the_ID());  ?> views <i class="fa fa-heart"></i> 40 favorites</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item mt-2 mb-2"><i class="fa fa-user-circle"></i> Sale ends April 15, 2022 at 3:55pm EEST </li>
-                    <li class="list-group-item mt-2 mb-2">Current price <br><i class="fa fa-user-circle"></i> 0,075 ($289,79)</li>
+                    <li class="list-group-item mt-2 mb-2"><i class="fa fa-clock-o"></i> Sale ends <?php echo date_format(date_create($value['auction_ends']), "F n, Y H:i:s");?> </li>
+                    <li class="list-group-item mt-2 mb-2">Current price <br><i class="fa fa-btc"></i> 0,075 ($289,79)</li>
                     <li class="list-group-item mt-2 mb-4">
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                             <button type="button" class="btn btn-primary"><i class="fa fa-user-circle"></i> By now</button>
@@ -44,6 +43,8 @@ get_header();
                 </ul>
             </div>
         </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+        <?php endif; ?>
     </div>
 </div>
 <h2>Trending Categories</h2>

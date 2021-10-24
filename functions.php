@@ -7,6 +7,7 @@
  * @package NFT_World
  */
 
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
@@ -53,7 +54,6 @@ if ( ! function_exists( 'nft_world_setup' ) ) :
 				'menu-1' => esc_html__( 'Primary', 'nft-world' ),
 			)
 		);
-
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -167,11 +167,11 @@ function add_menu_list_item_class($classes, $item, $args) {
 }
 add_filter('nav_menu_css_class', 'add_menu_list_item_class', 1, 3);
 
-
+/**
+ * remove p
+ */
 
 remove_filter( 'the_content', 'wpautop' );
-
-
 
 /**
  * Implement the Custom Header feature.
@@ -200,3 +200,21 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/**
+ * Post Views
+ */
+
+function setAndViewPostViews($postID) {
+    $count_key = 'views';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+    return $count; /* so you can show it */
+}
