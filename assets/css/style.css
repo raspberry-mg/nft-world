@@ -90,6 +90,14 @@ h2 {
     margin-top: 20px;
 }
 
+.profile-nav a {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 1em;
+    margin: -1em;
+}
+
 
 @media screen and (min-width: 3840px) {
     h2 {
